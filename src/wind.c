@@ -17,11 +17,9 @@ void calculateWindComponents(double windSpeed, double windDirection,
     double angleDiff = windRad - courseRad;
 
     // Headwind component (positiv e = headwind, negative = tailwind)
-    // cos gives us the component in the direction of travel
     *headwind = windSpeed * cos(angleDiff);
     
     // Crosswind component (positive = from right, negative = from left)
-    // sin gives us the perpendicular component
     *crosswind = windSpeed * sin(angleDiff);
 }
 
@@ -33,7 +31,6 @@ double calculateGroundSpeed(double trueAirspeed, double headwind) {
 
 double calculateWindCorrectionAngle(double trueAirspeed, double crosswind) {
     // Calculate the angle to "crab" into the wind
-    // asin gives us the angle in radians
     double angleRad = asin(crosswind / trueAirspeed);
     
     // Convert back to degrees
