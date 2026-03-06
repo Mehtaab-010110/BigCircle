@@ -4,6 +4,7 @@
 #define PI 3.14159265358979323846
 
 // Source: FAA Pilot's Handbook of Aeronautical Knowledge, Chapter 16
+// Source: Claude AI for wind component calculations
 // https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak
 void calculateWindComponents(double windSpeed, double windDirection, 
                              double courseDirection,
